@@ -12,14 +12,15 @@
       name: "@jboss-eap7"
       state: present 
 
-  - name: enable service jboss 
-    systemd: 
-      name: "{{ item }}"
-      state: started
-      enabled: yes   
-    loop:
-      - jboss-as    
-   
+  - name: Start manual jboss 
+    shell: "/opt/rh/eap7/root/usr/share/wildfly/bin/standalone.sh"
+    register: _result
+       register: _result
+
+  - name: Debug 
+    debug: 
+      msg: 
+       - Saida dos servicos desabilitados  '{{ _result }}' 
   
     
 
