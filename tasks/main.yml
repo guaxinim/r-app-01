@@ -1,14 +1,7 @@
 ---
 # tasks file for r-app-01
 
-  - name: Change pool id para empregado  
-    redhat_subscription:
-        state: present
-        #username: "{{ user_nome }}"
-        #password: "{{ user_senha }}"
-        #auto_attach: true
-        pool_ids:
-            - 8a85f98260c27fc50160c32cc4365ccb
+
 
   - name: Enable repository jboss EAP 
     rhsm_repository:
