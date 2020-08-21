@@ -1,0 +1,24 @@
+---
+# tasks file for r-app-01
+
+  - name: Enable repository jboss EAP 
+    rhsm_repository:
+          name: jb-eap-7-for-rhel-RHEL_7-server-rpms
+
+  - name: Instala server application 
+    yum:
+      name: "@jboss-eap7"
+      state: present 
+
+   - name: enable service firewall 
+     systemd: 
+          name: "{{ item }}"
+          state: started
+          enabled: yes   
+     loop:
+          - jboss-as    
+   
+  
+    
+
+     
