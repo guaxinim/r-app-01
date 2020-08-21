@@ -15,8 +15,7 @@
   - name: Start manual jboss 
     shell: "/opt/rh/eap7/root/usr/share/wildfly/bin/standalone.sh"
     register: _result
-       register: _result
-
+       
   - name: Debug 
     debug: 
       msg: 
