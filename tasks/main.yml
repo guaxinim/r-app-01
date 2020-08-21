@@ -13,7 +13,7 @@
       state: present 
 
   - name: Start manual jboss 
-    shell: "nohup /opt/rh/eap7/root/usr/share/wildfly/bin/standalone.sh </dev/null >/dev/null 2>&1 &"
+    shell: "nohup /opt/rh/eap7/root/usr/share/wildfly/bin/standalone.sh -b 0.0.0.0 </dev/null >/dev/null 2>&1 &"
     register: _result
        
   - name: Debug 
