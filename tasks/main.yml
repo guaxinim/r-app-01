@@ -5,7 +5,7 @@
 
   - name: Enable repository jboss EAP 
     rhsm_repository:
-        name: jb-eap-7-for-rhel-RHEL_7-server-rpms
+        name: jb-eap-7-for-rhel-7-server-rpms
 
   - name: Instala server application 
     yum:
